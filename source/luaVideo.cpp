@@ -22,19 +22,13 @@
 #- Copyright (c) Rinnegatamante <rinnegatamante@gmail.com> -------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------*/
-#include <stdlib.h>
 #include <malloc.h>
 #include <string.h>
 #include <unistd.h>
-#include <vitasdk.h>
-extern "C"{
-#include <utils.h> // utils.h file from vita2d
-}
 #include "include/luaplayer.h"
 
 #define FRAMEBUFFER_ALIGNMENT  0x40000
 #define VIDEO_BUFFERING        2
-#define ALIGN(x, a) (((x) + ((a) - 1)) & ~((a) - 1))
 #define stringify(str) #str
 #define VariableRegister(lua, value) do { lua_pushinteger(lua, value); lua_setglobal (lua, stringify(value)); } while(0)
 

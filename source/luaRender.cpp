@@ -30,18 +30,11 @@
 #-----------------------------------------------------------------------------------------------------------------------*/
 
 #include <string.h>
-#include <vitasdk.h>
-extern "C"{
-	#include <utils.h> // utils.h file from vita2d
-}
-#include <vita2d.h>
 #include "include/luaplayer.h"
 
 extern "C"{
 	#include "include/math_utils.h"
 }
-
-#define ALIGN(x, a) (((x) + ((a) - 1)) & ~((a) - 1))
 
 static matrix4x4 _vita2d_projection_matrix;
 extern SceGxmContext* _vita2d_context;

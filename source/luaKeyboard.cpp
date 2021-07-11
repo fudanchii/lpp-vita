@@ -28,12 +28,10 @@
 #- xerpi for drawing libs and for FTP server code ----------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------*/
 
-#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include "include/luaplayer.h"
 #include "include/utils.h"
-#include <vitasdk.h>
 
 #define stringify(str) #str
 #define VariableRegister(lua, value) do { lua_pushinteger(lua, value); lua_setglobal (lua, stringify(value)); } while(0)

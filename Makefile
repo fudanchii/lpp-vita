@@ -8,7 +8,7 @@ LIBS = -lcurl -lssl -lcrypto -lvorbisfile -lvorbis -logg -lsndfile -lvita2d -lSc
 	-lScePromoterUtil_stub -lm -lSceNet_stub -lSceNetCtl_stub -lSceAppUtil_stub -lScePgf_stub \
 	-ljpeg -lfreetype -lc -lScePower_stub -lSceCommonDialog_stub -lpng16 -lz -lSceCamera_stub \
 	-lspeexdsp -lmpg123 -lSceAudio_stub -lSceGxm_stub -lSceDisplay_stub -lSceShellSvc_stub \
-	-lopusfile -lopus -lSceHttp_stub -lSceAudioIn_stub -lluajit -ldl -ltaihen_stub  -lSceSysmodule_stub \
+	-lopusfile -lopus -lSceHttp_stub -lSceAudioIn_stub -lluajit-5.1 -ldl -ltaihen_stub  -lSceSysmodule_stub \
 	-lSceShutterSound_stub -lSceSsl_stub -lSceVshBridge_stub -lSceAvPlayer_stub -lSceRegistryMgr_stub
 
 CFILES   := $(foreach dir,$(SOURCES), $(wildcard $(dir)/*.c))
@@ -23,7 +23,7 @@ CFLAGS  = -fno-lto -g -Wl,-q -O3 -DWANT_FASTWAV -DHAVE_LIBSPEEXDSP \
 		-DHAVE_LIBSNDFILE -DHAVE_MPG123 -DWANT_FMMIDI=1 -DWANT_FASTAIFF \
 		-DUSE_AUDIO_RESAMPLER -DHAVE_OGGVORBIS -DHAVE_OPUSFILE \
 		-DSQLITE_OS_OTHER=1 -DSQLITE_TEMP_STORE=3 -DSQLITE_THREADSAFE=0 \
-		-I$(VITASDK)/$(PREFIX)/include/opus
+		-I$(VITASDK)/$(PREFIX)/include/opus -I$(VITASDK)/$(PREFIX)/include/luajit-2.0 \
 
 ifeq ($(SYS_APP_MODE),1)
 CFLAGS += -DSYS_APP_MODE

@@ -28,8 +28,6 @@
 #- xerpi for drawing libs and for FTP server code ----------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------*/
 
-#include <vitasdk.h>
-#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <mpg123.h>

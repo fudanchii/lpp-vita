@@ -28,8 +28,6 @@
 #- xerpi for drawing libs and for FTP server code ----------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------*/
 
-#include <vitasdk.h>
-#include <vita2d.h>
 #include "include/luaplayer.h"
 
 static int lua_flip(lua_State *L){

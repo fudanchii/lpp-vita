@@ -28,12 +28,8 @@
 #- xerpi for drawing libs and for FTP server code ---------------------------------------------------------------------#
 #----------------------------------------------------------------------------------------------------------------------*/
 
-#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-extern "C"{
-#include <vitasdk.h>
-}
 #include "include/zip.h"
 #include "include/unzip.h"
 #include "include/luaplayer.h"
@@ -41,7 +37,6 @@ extern "C"{
 #include "include/sha1.h"
 #define stringify(str) #str
 #define VariableRegister(lua, value) do { lua_pushinteger(lua, value); lua_setglobal (lua, stringify(value)); } while(0)
-#define ALIGN(x, a) (((x) + ((a) - 1)) & ~((a) - 1))
 
 #define FULL_EXTRACT 0
 #define FILE_EXTRACT 1

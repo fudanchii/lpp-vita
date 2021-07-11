@@ -39,6 +39,10 @@
 #include <vitasdk.h>
 #include <vita2d.h>
 
+extern "C" {
+#include "vita2d/utils.h"
+}
+
 extern void luaC_collectgarbage (lua_State *L);
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
